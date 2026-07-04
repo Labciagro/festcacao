@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="todo-wrapper">
+    <header class="header">
+      <h1>My Tasks</h1>
+      <p class="subtitle">Stay organized and productive</p>
+    </header>
+
+    <div class="input-section">
+      <div class="input-group">
+        <input 
+          type="text" 
+          id="todoInput" 
+          class="todo-input" 
+          placeholder="Add a new task..."
+          autocomplete="off"
+        >
+        <button id="addBtn" class="btn btn-add">Add</button>
+      </div>
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="active">Active</button>
+        <button class="filter-btn" data-filter="completed">Completed</button>
+      </div>
+    </div>
+
+    <div class="stats">
+      <span class="stat-item">Total: <span id="totalCount">0</span></span>
+      <span class="stat-item">Active: <span id="activeCount">0</span></span>
+      <span class="stat-item">Completed: <span id="completedCount">0</span></span>
+    </div>
+
+    <ul id="todoList" class="todo-list"></ul>
+
+    <div class="empty-state" id="emptyState">
+      <p>📝 No tasks yet. Add one to get started!</p>
+    </div>
+
+    <div class="actions">
+      <button id="clearBtn" class="btn btn-secondary">Clear Completed</button>
+      <button id="deleteAllBtn" class="btn btn-danger">Delete All</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
